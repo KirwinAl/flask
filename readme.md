@@ -10,4 +10,4 @@ pytest  --pylint --cov
 setup.py is a config file for pytest
 
 MY testfd
-test 3: getting Docker password ready
+test 3: getting Docker password ready1
