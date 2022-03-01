@@ -35,11 +35,11 @@ def test_calculator_subtract_method():
     assert calculator.subtract(1) == -1
 
 def test_calculator_multiply_method():
-    # instantiating the Calculator Class
+    """ instantiating the multiplication method """
     calculator = Calculator()
     assert calculator.multiply(1) == 0
 
 def test_calculator_divide_method():
-    # instantiating the Calculator Class
+    """ instantiating the multiplication method """
     calculator = Calculator()
     assert calculator.divide(1) == 0.0
