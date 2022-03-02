@@ -10,6 +10,7 @@ on:
     branches:
       - 'live'
 
+jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
