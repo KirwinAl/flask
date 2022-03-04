@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+	<meta charset = "utf-8">
+	<title>Kirwin - IS218</title>
+    <!--Link for Main CSS -->
+    <link href= "../static/css/main.css" rel = "stylesheet">
+	<!-- BSv5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		crossorigin="anonymous">
+	<!-- JS for BSv5 in case we need to use in the future -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</head>
+<nav class = "navbar navbar-expand-sm navbar-dark">
+    <a class = "navbar-brand" href = "#">CI/CD</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+	<div class = "collapse navbar-collapse" id = "navbarNav">
+        <ul class = "navbar-nav ms-auto">
+            <li class = "nav-item"><a class = "nav-link" href = "index.html">Home</a></li>
+		    <li class = "nav-item"><a class = "nav-link" href = "git.html">Git</a></li>
+		    <li class = "nav-item"><a class = "nav-link" href = "docker.html">Docker</a></li>
+		    <li class = "nav-item"><a class = "nav-link" href = "python.html">Python/Flask</a></li>
+	    </ul>
+    </div>
+</nav>
+
+<div class = "container-lg" style = "padding-top: 2rem;">
+    <div class = "container-fluid">
+        <p id = "cicdIntro">
+            Before explaining what Continuous Integration / Continuous Delivery (CI/CD) means, I would like to give a
+            scenario:
+            <br><br>
+            <i>Imagine going to work, and you had a team where the job was to take a space and design that room as if it
+                was a place for students. Every member has their own vision but the issue is that the team has to work on one
+                project file. Team members can download and work on their individual assignments but then the project would
+                have multiple different files when only one is needed. Then, only committing to one file will result in having
+                people redo their parts in one single file or having to wait on someone to finish their part in order to work
+                on yours. It becomes a tense task to constantly having to wait on someone, see what was changed, then add your
+                own work to the project, check if it doesn't crash or makes sense, then upload for the next person.
+            </i>
+        </p>
+    </div>
+    <div class = "container-fluid">
+        <p id = "ci">
+            That's the essence of Continuous Integration (CI), there is one master copy that everyone involved would download,
+            work on their part then merge that to the development branch or the live production branch. The master copy would
+            essentially stay as is in case, somewhere along the line there's data loss but the two branches are the ones
+            constantly changing through team members.
+        </p>
+        <p id = "cd">
+            Continuous Delivery (CD) is constantly uploading to the branches to get constant and instant feedback or pushing
+            the development version of the service to the live production state with ease. The reason that works with relatively
+            small issues is that the team would know something went wrong in the development stage and don't have to panic and
+            rush to fix something for live production.
+        </p>
+        <p id="ghActions">
+            There is a bit of automation involved in the deployment or to better put it, Actions that the deployment process would
+            do and GitHub, in this case, will perform them as told. This application uses 2 actions per workflow, test runs and the
+            deployment location (development will go to <abbr title = "We'll use another server on Heroku to demonstrate the difference"
+                                                              style = "text-decoration: none;">Docker*</abbr>, live would go to the hosting site: Heroku).
+        </p>
+    </div>
+</div>

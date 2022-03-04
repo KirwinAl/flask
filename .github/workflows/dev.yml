@@ -52,3 +52,14 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+#This is sent to the dev version of Heroku and should be on any push/merge requests
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "kaa46dev" #Must be unique in Heroku and linked to my own
+          heroku_email: "kaa46@njit.edu"
+          usedocker: true

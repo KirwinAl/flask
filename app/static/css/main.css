@@ -1,0 +1,27 @@
+.navbar {
+    background-color: black;
+    padding-bottom: 1rem;
+}
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+.navbar-brand {
+    padding-left: 3rem;
+}
+.nav-item {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.nav-item a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.nav-item a:hover {
+    background-color: slategray;
+}
