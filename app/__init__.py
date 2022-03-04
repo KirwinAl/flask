@@ -1,5 +1,5 @@
 """A simple flask web app"""
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 
 
 def create_app():
@@ -7,9 +7,12 @@ def create_app():
     app = Flask(__name__)
     app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
-    @app.route("/", "/index.html")
+    @app.route("/")
     def index():
         return render_template('index.html')
+    @app.route("/index.html")
+    def home():
+        return redirect(url_for('/'), code=302)
     @app.route("/gitPage.html")
     def gitPage():
         return render_template('gitPage.html')
