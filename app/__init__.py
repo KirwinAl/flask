@@ -8,11 +8,9 @@ def create_app():
     app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
     @app.route("/")
+    @app.route("/index.html")
     def index():
         return render_template('index.html')
-    @app.route("/index.html")
-    def home():
-        return redirect(url_for('/'), code=302)
     @app.route("/gitPage.html")
     def gitPage():
         return render_template('gitPage.html')
