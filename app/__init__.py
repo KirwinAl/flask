@@ -10,8 +10,20 @@ def create_app():
     @app.route("/")
     def index():
         return render_template('index.html')
+    @app.route("/index.html")
+    def index2():
+        return render_template('index.html')
     @app.route("/gitPage.html")
     def gitPage():
         return render_template('gitPage.html')
+    @app.route("/dockerPage.html")
+    def gitPage():
+        return render_template('dockerPage.html')
+    @app.route("/pythonPage.html")
+    def gitPage():
+        return render_template('pythonPage.html')
+    @app.route("/cicdPage.html")
+    def gitPage():
+        return render_template('cicdPage.html')
 
     return app
