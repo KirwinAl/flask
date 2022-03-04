@@ -10,7 +10,7 @@ def create_app():
     @app.route("/")
     def index():
         return render_template('index.html')
-    @app.route("/gitPage")
+    @app.route("/gitPage.html")
     def gitPage():
         return render_template('gitPage.html')
 
