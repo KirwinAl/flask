@@ -1,5 +1,5 @@
 """A simple flask web app"""
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template
 
 
 def create_app():
