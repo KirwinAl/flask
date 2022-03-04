@@ -14,13 +14,13 @@ def create_app():
     def gitPage():
         return render_template('gitPage.html')
     @app.route("/dockerPage.html")
-    def gitPage():
+    def dockerPage():
         return render_template('dockerPage.html')
     @app.route("/pythonPage.html")
-    def gitPage():
+    def pythonPage():
         return render_template('pythonPage.html')
     @app.route("/cicdPage.html")
-    def gitPage():
+    def cicdPage():
         return render_template('cicdPage.html')
 
     return app
