@@ -1,13 +1,17 @@
-# Calculator Project Setup
-[![Build Status](https://app.travis-ci.com/kaw393939/calc2.svg?branch=main)](https://app.travis-ci.com/kaw393939/calc2)
+# Project 1 : Website Made from Flask and Deployed to Heroku
+Live Production Badge : [![Run Tests, Build Dockerfile, Run on Heroku - Live Version](https://github.com/KirwinAl/flask/actions/workflows/prod.yml/badge.svg?branch=live)](https://github.com/KirwinAl/flask/actions/workflows/prod.yml)
 
-To run tests, Lint, and Coverage report use this command:
+Dev Production Badge : [![Run Tests, Build Dockerfile, Run on Heroku - Dev Version](https://github.com/KirwinAl/flask/actions/workflows/dev.yml/badge.svg?branch=dev)](https://github.com/KirwinAl/flask/actions/workflows/dev.yml)
 
-pytest  --pylint --cov
+Live: https://kaa46live.herokuapp.com
 
-.pylintrc is the config for pylint
-.coveragerc is the config for coverage
-setup.py is a config file for pytest
+Dev: https://kaa46dev.herokuapp.com
+***
+The webpages explain what Git, Docker, Python/Flask and CI/CD means and instructions within them 
+to use this application yourself.
 
-MY testfd
-test 3: getting Docker password ready1
+If accessed through a terminal application, use pytest to test all the webpages included in 
+this application. This does include a calculator application that isn't used yet but is included
+for future use.
+
+Developed By Kirwin Alcantara for IS 218 - 2022 
