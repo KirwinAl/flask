@@ -16,18 +16,14 @@
 	</script>
 	<!-- Link for Slideshow -->
 	<link href = "../static/css/slideshow.css" rel = "stylesheet">
-	<!--Link for Script-->
-	<script src = "../static/js/slideshow.js"></script>
-
-	
 </head>
-<nav class = "navbar navbar-expand-lg navbar-dark">
+<nav class = "navbar navbar-expand-sm navbar-dark">
 	<a class = "navbar-brand" href = "#">Home</a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
        </button>
-	<div class = "collapse navbar-collapse" id = "navbarNav">
+	<div class = "collapse navbar-collapse" id = "collapsibleNavbar">
         <ul class = "navbar-nav ms-auto">
 		    <li class = "nav-item"><a class = "nav-link" href = "gitPage.html">Git</a></li>
 		    <li class = "nav-item"><a class = "nav-link" href = "dockerPage.html">Docker</a></li>
@@ -36,28 +32,28 @@
 	    </ul>
     </div>
 </nav>
-<div class = "container-fluid">
+<div class = "container-sm" style = "padding-top: 5rem;">
 	<!-- Image Slideshow -->
 	<div class = "slideshow-container">
 		<!--Images-->
 		<div class = "mySlides">
 			<div class = "numbertext">1/4</div>
-			<img src = "../static/images/Git.png" style = "width: 100%" alt = "">
+			<img src = "../static/images/Git.png" style = "width: 500px;" alt = "Git Icon">
 			<div class = "text">Git</div>
 		</div>
 		<div class = "mySlides">
 			<div class = "numbertext">2/4</div>
-			<img src = "../static/images/Docker.png" style = "width: 100%" alt = "">
+			<img src = "../static/images/Docker.png" style = "width: 100%;" alt = "Docker Icon">
 			<div class = "text">Docker</div>
 		</div>
 		<div class = "mySlides">
 			<div class = "numbertext">3/4</div>
-			<img src = "../static/images/Python.png" style ="width: 100%" alt="">
+			<img src = "../static/images/Python.jpeg" style ="width: 100%" alt="Python Icon">
 			<div class = "text">Python/Flask</div>
 		</div>
-		<div class = "mySlides fade">
+		<div class = "mySlides">
 			<div class = "numbertext">4/4</div>
-			<img src = "../static/images/CICD.png" style = "width: 100%" alt = "">
+			<img src = "../static/images/CICD.png" style = "width: 100%" alt = "CI/CD Process Icon">
 			<div class = "text">CI/CD</div>
 		</div>
 		<!--Next and Previous Buttons-->
@@ -72,18 +68,21 @@
 		<span class = "dot" onclick = "currentSlide(3)"></span>
 		<span class = "dot" onclick = "currentSlide(4)"></span>
 	</div>
-
+	<!--Link for Script, has to go after the whole Slideshow html code-->
+	<script src = "../static/js/slideshow.js"></script>
     <!--Bottom of the page-->
-    <div class = "container-fluid">
-        <div class = "container-fluid ms-6">
+    <div class = "row">
+        <div class = "col" style = "padding-top: 5rem;">
             <p id = "BriefIntro">This is a website to describe the 4 technologies used in IS218. I'm going to talk
                 about Git, Docker, Python in terms of flask, and Continuous Integration and Continuous Deployment.
                 All of these technologies are used to have this website up and running and shown to you and now, I'm
                 using it to explain them to you, the visitor!
             </p>
         </div>
-        <button class="button" data-target="git.html">
-            Proceed to Git &#10095
-        </button>
+       <div class = "col" style = "padding-top: 10rem; padding-left: 10rem;">
+           <button onclick = "location.href = 'gitPage.html'" type="button">
+               Proceed to Git &#10095
+           </button>
+       </div>
     </div>
 </div>

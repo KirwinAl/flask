@@ -41,14 +41,45 @@
         </p>
     </div>
     <div class = "container-fluid">
-        <!-- Make another slideshow of text -->
-        <p id = "branch"></p>
-        <p id = "merge"></p>
-        <p id = "commit"></p>
-        <p id = "tags"></p>
-        <p id = "repositories"></p>
+        <p id = "branch"><b>Branch: </b>is a different version of the same project. An example of a branch is
+            like this project, there is a development branch where I tested a LOT of different changes with unused
+            files for this project like the calculator files. There could be a lot of different branches for multiple
+            purposes, it depends on the end goal of that branch. Click on the branch you want to see:
+        </p>
+        <ul>
+            <li><a href = "">Live Branch</a> <-- You're seeing this one</li>
+            <li><a href = "">Development Branch</a></li>
+        </ul>
+        <p id = "merge"><b>Merge: </b> is taking the changes from one branch then adding them to the other, mainly the
+            master branch. They usually start with a pull request (reviewing the changes from the main/master branch)
+            then will go through with it once accepted.
+        </p>
+        <p id = "commit"><b>Commit: </b> is like the local "Save As" function. That will allow you to see what code
+            changed, see which branch you're going to be working on, save the code with tags. You can
+            <i>commit and push</i> meaning to do all of this and then move it to the main remote branch as working and
+            usuable code.
+        </p>
+        <p id = "tags"><b>Tags: </b> are the notes written onto the commit to dictate what changed between the old
+            version and the version you're going to push soon. You can also use this to dictate the important files
+            of the project if you like, they could be added during, or after they are pushed.
+        </p>
+        <p id = "repositories"><b>Repositories: </b> are like the storage container of the project. This will store
+            all the project's files, branches, etc. This is what shared between users if they wanted to replicate the
+            project. To see this project's repository: <a href = "">link</a>
+        </p>
     </div>
-    <button type="button">
-        Proceed to Docker &#10095
-    </button>
+    <div class = "container mx-auto">
+        <div class = "row justify-content-center justify-content-between">
+            <div class = "col">
+                <button onclick="location.href = 'index.html'" type = "button">
+                    &#10094 Return Home
+                </button>
+            </div>
+            <div class = "col">
+                <button onclick="location.href = 'dockerPage.html'" type = "button">
+                    Proceed to Docker &#10095
+                </button>
+            </div>
+        </div>
+    </div>
 </div>

@@ -9,7 +9,7 @@ on:
   pull_request:
     branches:
       - 'live'
-
+#This is sent to the live version of the project
 jobs:
   deploy:
     runs-on: ubuntu-latest

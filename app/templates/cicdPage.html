@@ -62,8 +62,43 @@
         <p id="ghActions">
             There is a bit of automation involved in the deployment or to better put it, Actions that the deployment process would
             do and GitHub, in this case, will perform them as told. This application uses 2 actions per workflow, test runs and the
-            deployment location (development will go to <abbr title = "We'll use another server on Heroku to demonstrate the difference"
-                                                              style = "text-decoration: none;">Docker*</abbr>, live would go to the hosting site: Heroku).
+            deployment location (development will go to <abbr title = "We'll use another server on Heroku to demonstrate the difference" style = "text-decoration: none;">Docker*</abbr>,
+            live would go to the hosting site: Heroku).<br>
+            You can see what actions are being done if you go to the Actions tab in the GitHub repository. In the dev version of this project,
+            you'll see the test that I mentioned in the page before.
+        </p>
+    </div>
+    <div class = "container-fluid">
+        <p id = "projectFlow">
+            This project is done locally on my PC using PyCharm Professional. Then, once I'm done with any changes regarding the web application functions, I'll push the
+            changes to the respective branch. When I'm sastified with the functionality with the project, I can push and merge the changes to the live production branch
+            (the live server) and change the visual aspects since the functionality aspect of the project is not changing at all.
+        </p>
+        <p id = "herokuServers">
+            These are the two servers:
+            <ul>
+                <li>Live (This current one you are seeing): <a href = "https://kaa46live.herokuapp.com">https://kaa46live.herokuapp.com</a></li>
+                <li>Dev: <a href ="https://kaa46dev.herokuapp.com">https://kaa46dev.herokuapp.com</a></li>
+            </ul>
+        </p>
+        <p id = "dockerUpdate">
+            There's also a cool part of this project as well, whenever the live or master branch is updated, the Dockerhub image is going to update as well with the new changes
+            that you pushed through. It's all done through Actions, in this case our GitHub workflow files from earlier!
         </p>
     </div>
 </div>
+
+    <div class = "container mx-auto">
+        <div class = "row justify-content-center justify-content-between">
+            <div class = "col">
+                <button onclick="location.href = 'pythonPage.html'" type = "button">
+                    &#10094 Return to Python - Flask
+                </button>
+            </div>
+            <div class = "col">
+                <button onclick="location.href = 'index.html'" type = "button">
+                    Return to the Home Page
+                </button>
+            </div>
+        </div>
+    </div>

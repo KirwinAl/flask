@@ -34,11 +34,82 @@
     <div class = "container-fluid">
         <p id = "dockerIntro">
             Docker is an interesting program. It works like a Virtual Machine (VM) without hard committing
-            resources like VirtualBox or VMWare would. It provides containers, images and have the ability to
+            resources like VirtualBox or VMWare would. It provides containers, images and has the ability to
             share resources with your current machine when it needs it.
         </p>
     </div>
     <div class = "container-fluid">
+        <p>There are two terms that I need to explain in order to fully understand what Docker does:</p>
         <!--Explain Containers, Images, project repository, docker commands, accessing the container outside PyCharm-->
+        <p id = "dockerContain"><b>Containers: </b> are a storage space where an application (usually created from an image)
+            can be virtualized and separate itself from the host computer and other containers. These are <i>quick-and-dirty</i>
+            instances of a run-time environment without committing a lot of resources on virtualizing hardware like popular virtual machine
+            applications.
+        </p>
+        <p id = "dockerImages"><b>Images: </b> are like a starting operation installation file. These files are almost always
+            read-only and used for creating multiple instances (containers). The best way to think about it is: the recipe of
+            the cake is the <b><i>image</i></b> while each cake are the <b><i>containers</i></b>.
+        </p>
     </div>
+    <div class = "container-fluid">
+        <p id = "dockerCommands">Docker has their own commands to operate within the terminal application (outside the Docker application itself).
+            There are many but the ones that I know are simple to know and operate for the things that I would be using Docker for.
+            <br><br>
+            Here are the commands that I know in no particular order and the operation that they do:
+        </p>
+        <ul>
+            <li><code>docker ps</code> and <code>docker images</code>: These are two commands that list the containers and the images
+                (respectfully) created on your computer. It lists the ID and Names column that I will use for using the container in the
+                terminal.
+            </li>
+            <li><code>docker pull</code> and <code>docker push</code>: This works like GitHub's pull and push. You can
+                specify what content you are pushing to your Docker Hub repository. With pull, unlike with GitHub, you'll be pulling from the
+                Docker Hub registry <b>most of the time</b>, meaning that you'll be pulling from a <code>user/image[:TAG]</code>
+            </li>
+            <li><code>docker create</code>: This allows you to create a container using an image file from Docker Hub or some DockerFile that you
+                have in your directory.
+            </li>
+            <li><code>docker run</code>: This will start the container that you entered. It will create it if it doesn't exist and depending on the
+                arguments that you pass through, you can detach and use a terminal to access the container.
+            </li>
+            <li><code>docker exec</code>: This will allow you to connect to your container that you have on your computer. You specify the container
+             name and any arguments that you want to use. It may require you to use <code>winpty</code> before using any <code>-t</code> commands if the
+            image itself doesn't have a dedicated terminal image.
+            </li>
+        </ul>
+    </div>
+    <div class = "container-fluid">
+        <p id = "dockerRepo"> And just like GitHub, there are repositories for each image you would create on Docker. The link to the
+            project's repository is here: <a href = "https://hub.docker.com/r/kirwinal/dockerflask">hub.docker.com/r/kirwinal/dockerflask</a>.
+        </p>
+        <p id = "pullRepo"> And using your terminal application like Git, you can pull request this same application and begin creating your own
+            version of this simple web application!
+        </p>
+        <ol>
+            <li>Using your terminal application, you can use <code>docker pull kirwinal/dockerflask:dev</code> or <code>docker pull kirwinal/dockerflask:master</code>
+                to download the project</li>
+            <li>After pulling the image, you have to run and create the image using <code>docker run -itdp [STARTING_PORT]:[ENDING_PORT] kirwinal/dockerflask:[TAG]</code>
+                <i>TAG being dev or master</i></li>
+            <li>To check both the name docker assigned and to see if you've created it, use <code>docker ps</code> and should see the list of containers
+            that you have on your computer. Under the <code>NAMES</code> column, you should see the name that docker assigned the container.</li>
+            <li>Then to finally access that container, use <code>winpty docker exec -it [NAME] sh</code>. This should finally allow you to use things like pytest which we will
+            talk about in the next page.</li>
+        </ol>
+    </div>
+
+
 </div>
+    <div class = "container mx-auto">
+        <div class = "row justify-content-center justify-content-between">
+            <div class = "col">
+                <button onclick="location.href = 'gitPage.html'" type = "button">
+                    &#10094 Return to Git
+                </button>
+            </div>
+            <div class = "col">
+                <button onclick="location.href = 'pythonPage.html'" type = "button">
+                    Proceed to Python - Flask &#10095
+                </button>
+            </div>
+        </div>
+    </div>

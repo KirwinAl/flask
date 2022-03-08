@@ -9,7 +9,7 @@ on:
   pull_request:
     branches:
       - 'dev'
-
+#Run tests, not used on live
 jobs:
   runtest:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
       - name: Test with pytest
         run: pytest --pylint -vv
 
-#Builds the container needed locally
+#Builds the container needed for Docker
   build-container:
     runs-on: ubuntu-latest
     steps:

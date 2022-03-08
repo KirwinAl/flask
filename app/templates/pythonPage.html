@@ -43,5 +43,98 @@
     <div class = "container-fluid">
         <!--Explain Pytest, simple pages and testing it, link to GitHub, link to flask and Blueprint doc and explain the
         file structure of this project-->
+        <p id = "pytest">Starting with <i>pytest</i>, Pytest is a framework in Python that checks your code and gives you
+            a result of good vs bad code. This doesn't stop at just working or not working but with a calculator, you can
+            write code that does calculations, it runs and complies with no errors but how do would you know that your
+            addition function works for most cases? or if you're hosting a web server, how do you know that you published the
+            right web application or if that application is running at all? Pytest allows you to write small and effective
+            code to check whatever you expect to be shown, actually shows up for other users.
+        </p>
+        <p id = "simplePages">So within the dev portion of this project, you would see a directory called <code>app</code> and
+        another called <code>tests</code>. The app directory is simply put the application that you are launching when running the
+        server. The tests directory is small code supported by PyTest that contains code that you would write that says:<br>
+        <code>Here is the result I expect, return an error if it's not this</code>
+        <br>
+        For this project, I have several pages created, so I have several tests to check whether the page that I created even has the
+        right page showing for the user.
+        The live version of this project would not have this tests directory normally but for the sake of consistency, I have included it.</p>
+    </div>
+    <div class = "container-fluid">
+        <p id = "testExample">GitHub has all of these files stored, and you should be able to access this project's repository using this link: <a href = "https://github.com/KirwinAl/flask">
+            https://github.com/KirwinAl/flask</a>.<br>
+        You can download the project and use the Dockerfile within this project to create a container (or the other method like before), you can use the terminal and use <code>pytest</code>.
+        <br><br>Here is how the result should look:</p><img src = "" alt = "PyTest Example"><br><br>
+        <p id = "fileStructure">Within GitHub or downloading the project, you can see how the project's file structure is laid out. I'll highlight the important files and explain the purpose
+        of what and why files are in the places that they are in:</p>
+        <ul>
+            <li>.github: This will contain the workflow files that each branch will use
+                <ul>
+                    <li>workflows
+                        <ul>
+                            <li>dev.yml: This file has commands that when pushed to GitHub will perform actions making some actions seem automatic. This is the development version.</li>
+                            <li>prod.yml: This is the same file as above but normally wouldn't include some tasks like tests. This is the file responsible for showing you this page now</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>app: this is the application files that are being used on the web application, some are being displayed, some are not.
+                <ul>
+                    <li>static: these are files that doesn't change between pages. It can contain things like CSS files, JS, or images.
+                        <ul>
+                            <li>css</li>
+                            <li>images</li>
+                            <li>js</li>
+                        </ul>
+                    </li>
+                    <li>templates: this contains html templates that are used to display the webpages for you, the user to see.
+                    <ul>
+                        <li>cicdPage.html: CI/CD Page (next and last page)</li>
+                        <li>dockerPage.html: Docker Page</li>
+                        <li>gitPage.html: Git Page</li>
+                        <li>index.html: Home Page</li>
+                        <li>pythonPage.html: This is the page you're seeing</li>
+                        <li>index-testing.html: This is the original page that I used to test Pytest, not used</li>
+                    </ul>
+                    <li>__init__.py: This is the initation file for the application, this will create the app instance which contains the route for each page and the location of that page</li>
+                    <li>run.py: This will start an instance of the initation file</li>
+                </ul>
+            </li>
+            <li>calculator: This is the calculator portion that we are testing for another project, can be used to test pytest as well. Not used here so I won't be explaining much more.</li>
+            <li>tests: This is what PyTest uses to check whatever you want to check
+                <ul>
+                    <li>__init__.py: This is empty but this is also the initation file for the test section</li>
+                    <li>calculator_test.py: A test to check the results for the calculator section of the application</li>
+                    <li>cicdPage_test.py: Test to check if the page has <b>CI/CD</b> as the result of the page</li>
+                    <li>conftest.py: This creates the app instance and test if its functional</li>
+                    <li>dockerpage_test.py: Test to check if the page has <b>Docker</b> as the result of the page</li>
+                    <li>gitPage_test.py: Test to check if the page has <b>Git</b> as the result of the page</li>
+                    <li>homepage_test.py: Test to check if the page has <b>Home</b> as the result of the page</li>
+                    <li>pythonPage_test.py: Test to check if the page has <b>Python</b> - Flask as the result of the page</li>
+                </ul>
+            </li>
+            <li>docker-compose.yml: This has the settings that the Dockerfile will use if accessed through a terminal</li>
+            <li>Dockerfile: This is the instructions for Docker to create a container for flask and this project</li>
+            <li>heroku.yml: Instructions for Heroku (the hosting site we are using for this project) and what to use to build</li>
+            <li>pytest.ini: This is the setting file for pytest, it has the directory for tests in case that you want to change the default</li>
+            <li>readme.md: This is simply a "How to" or "What is" file to this project</li>
+            <li>requirements.txt: This is for any pull requests and the libraries that the project will need to work properly</li>
+            <li>setup.py: This is a script to install the packages needed for the application mentioned</li>
+        </ul>
+        <p id = "extra">There are files like .gitignore and .dockerignore, these are files that for their respective services, will
+        ignore directories or files. You can modify the contents if you like but not really used in this project.</p>
     </div>
 </div>
+    <div class = "container mx-auto">
+        <div class = "row justify-content-center justify-content-between">
+            <div class = "col">
+                <button onclick="location.href = 'dockerPage.html'" type = "button">
+                    &#10094 Return to Docker
+                </button>
+            </div>
+            <div class = "col">
+                <button onclick="location.href = 'cicdPage.html'" type = "button">
+                    Proceed to CI/CD &#10095
+                </button>
+            </div>
+        </div>
+    </div>
