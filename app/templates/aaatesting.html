@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AAA Testing</title>
+    <!-- BSv5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Link for Main CSS -->
+    <link href= "../static/css/main.css" rel = "stylesheet">
+    <!-- JS for BSv5 in case we need to use in the future -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</head>
+    <nav class = "navbar navbar-expand-sm navbar-dark">
+        <a class = "navbar-brand me-auto" href = "#">AAA Testing</a>
+        <a class = "nav-link" href = "aboutme.html">About Me</a>
+        <div class = "collapse navbar-collapse" id = "navbarNav">
+            <ul class = "navbar-nav ms-auto">
+                <!--Project 1 -->
+                <li class = "nav-item"><a class = "nav-link" href = "gitPage.html">Git</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "dockerPage.html">Docker</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "pythonPage.html">Python - Flask</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "cicdPage.html">CI/CD</a></li>
+                <!--Project 2 -->
+                <li class = "nav-item"><a class = "nav-link" href = "glossary.html">Glossary</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "index.html">Home</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "oop.html">OOP</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "solid.html">SOLID</a></li>
+            </ul>
+        </div>
+    </nav>
+<body>
+    <div class = "container-fluid">
+        <h1>AAA Testing</h1>
+        <p>AAA Testing is simply an acronym for "Arrange, Act, Assert". This method of testing is super important for programmers to know
+        since while a program might be running smooth with seemingly no errors, there can be logic errors that we can encounter. We've
+        created a simple calculator application to demonstrate all the topics that this portion of the website will talk about. First,
+        let's talk about the structure of the AAA structure.</p>
+        <div class = "container-fluid">
+            <p>
+                Pytest recognizes the AAA structure as followed:
+                <ul style = "list-style: none">
+                    <li><code>from calculator import Calculator</code> This says "from the calculator library, grab the Calculator class".</li>
+                    <li><code>def test_calculator_add_method():</code> This creates the method for Pytest to check (This is simple addition).</li>
+                    <li><code>"""Testing the Calculator"""</code> This is a docstring, simply tells both Pytest and the programmer what this method does</li>
+                    <li><code>calculator = Calculator()</code> This is simply creating an instance of Calculator, we'll talk more about this in OOP</li>
+                    <li><code>assert calculator.add(1,1) == 2</code> Asserting is another way saying "Make sure that this result is correct, throw an error if it's not".</li>
+                </ul>
+                Each test method looks exactly like this. Some methods might have more or less but the minimum is this. Pylint will check if this is in the correct formatting.
+                You want to be clear and consistent as possible so that other programmers can understand and pick up from where you left off. Let's explain the code a bit more...
+            </p>
+            <p>
+                <code>from calculator import Calculator</code> It's important before any testing can even start to import the class that you are testing, you only have to do this once, and
+                    it must be the first line of code you write in a pytest related code. This isn't always the case like For this case, we are working with the calculator app included in this repository. You can download
+                    it and follow along from my GitHub page: <a href= "https://github.com/KirwinAl/flask/tree/improved_calc">https://github.com/KirwinAl/flask/tree/improved_calc</a>.
+                    Instructions to clone it on Docker is under Project 1: Docker or <a href = 'dockerPage.html'>click here</a>.
+                <br>
+                <code>def test_calculator_add_method():</code> This is creating a method that creates a namespace for whatever we need it for. We're using it for making a quick addition
+                    test.
+                <br>
+                <code>calculator = Calculator()</code> This is a constructor was instantiated into this current method. So, any methods related to calculator will be contained here. This will be
+                    a concept that I'll talk about in OOP.
+                <br>
+                <code>assert calculator.add(1,1) == 2</code> This is the last A in AAA, assertion. Asserting like said above is saying "make sure this is the result". This is incredibly important for
+                    testing the logic behind your code. Without this, a program can still run with what seems like no problems, but it can have 2+2 = 5 if you are not attentive enough while coding. While I'm
+                    not saying to be completely aware while coding, AAA testing can help find issues.
+                    This is how it would show:
+            </p>
+            <img src="../static/images/AAAError_ex.png">
+            <div class = "container-fluid">
+                <p>
+                    Pytest is helpful enough to show you which method has the issue which narrows down your work on finding a bug/error, and you focus on fixing them to have your tests looking all green like this:
+                </p>
+                <img src="../static/images/AAAPass_ex.png">
+            </div>
+        </div>
+    </div>
+    <div class = "container mx-auto">
+        <div class = "row justify-content-center justify-content-between">
+            <div class = "col">
+                <button onclick="location.href = 'glossary.html'" type = "button">
+                    &#10094 Return to Glossary
+                </button>
+            </div>
+            <div class = "col">
+                <button onclick="location.href = 'oop.html'" type = "button">
+                    Proceed to OOP &#10095
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

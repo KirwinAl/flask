@@ -2,7 +2,7 @@
 <head>
 	<meta charset = "utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Kirwin - IS218</title>
+	<title>Continuous Integration/Continuous Delivery</title>
     <!--Link for Main CSS -->
     <link href= "../static/css/main.css" rel = "stylesheet">
 	<!-- BSv5 -->
@@ -14,21 +14,24 @@
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 </head>
-<nav class = "navbar navbar-expand-sm navbar-dark">
-    <a class = "navbar-brand" href = "#">CI/CD</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-	<div class = "collapse navbar-collapse" id = "navbarNav">
-        <ul class = "navbar-nav ms-auto">
-            <li class = "nav-item"><a class = "nav-link" href = "index.html">Home</a></li>
-		    <li class = "nav-item"><a class = "nav-link" href = "gitPage.html">Git</a></li>
-		    <li class = "nav-item"><a class = "nav-link" href = "dockerPage.html">Docker</a></li>
-		    <li class = "nav-item"><a class = "nav-link" href = "pythonPage.html">Python/Flask</a></li>
-	    </ul>
-    </div>
-</nav>
+    <nav class = "navbar navbar-expand-sm navbar-dark">
+        <a class = "navbar-brand me-auto" href = "#">CI/CD</a>
+        <a class = "nav-link" href = "aboutme.html">About Me</a>
+        <div class = "collapse navbar-collapse" id = "navbarNav">
+            <ul class = "navbar-nav ms-auto">
+                <!--Project 1 -->
+                <li class = "nav-item"><a class = "nav-link" href = "gitPage.html">Git</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "dockerPage.html">Docker</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "pythonPage.html">Python - Flask</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "index.html">Home</a></li>
+                <!--Project 2 -->
+                <li class = "nav-item"><a class = "nav-link" href = "glossary.html">Glossary</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "aaatesting.html">AAA Testing</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "oop.html">OOP</a></li>
+                <li class = "nav-item"><a class = "nav-link" href = "solid.html">SOLID</a></li>
+            </ul>
+        </div>
+    </nav>
 
 <div class = "container-lg" style = "padding-top: 2rem;">
     <div class = "container-fluid">
@@ -75,10 +78,11 @@
             (the live server) and change the visual aspects since the functionality aspect of the project is not changing at all.
         </p>
         <p id = "herokuServers">
-            These are the two servers:
+            These are the three servers:
             <ul>
-                <li>Live (This current one you are seeing): <a href = "https://kaa46live.herokuapp.com">https://kaa46live.herokuapp.com</a></li>
+                <li>Live: <a href = "https://kaa46live.herokuapp.com">https://kaa46live.herokuapp.com</a></li>
                 <li>Dev: <a href ="https://kaa46dev.herokuapp.com">https://kaa46dev.herokuapp.com</a></li>
+                <li>OOP (This current one you are seeing and only visible on this and the dev server): <a href ="https://kaa46oop.herokuapp.com">https://kaa46oop.herokuapp.com</a></li>
             </ul>
         </p>
         <p id = "dockerUpdate">
@@ -98,6 +102,11 @@
             <div class = "col">
                 <button onclick="location.href = 'index.html'" type = "button">
                     Return to the Home Page
+                </button>
+            </div>
+            <div class = "col">
+                <button onclick="location.href = 'glossary.html'" type = "button">
+                    Continue to Project 2 - Glossary &#10095
                 </button>
             </div>
         </div>

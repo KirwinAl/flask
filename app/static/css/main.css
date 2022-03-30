@@ -1,5 +1,6 @@
 .navbar {
     background-color: black;
+    position: relative;
 }
 .navbar-nav {
     list-style-type: none;
@@ -10,6 +11,18 @@
 }
 .navbar-brand {
     padding-left: 3rem;
+}
+.dropdown, .btn {
+    position: relative;
+}
+#BriefIntro {
+    margin-top: 4.25em;
+}
+#flaskDrop {
+    margin-right: 1em;
+}
+#oopDrop {
+    margin-right: 2em;
 }
 .nav-item {
     display: block;
@@ -23,4 +36,8 @@
 }
 .nav-item a:hover {
     background-color: slategray;
+}
+
+#calcClass, #operClass, #calcTest {
+    margin: 2em;
 }
