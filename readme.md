@@ -1,4 +1,5 @@
 # Project 2 : OOP, AAA Testing, SOLID Explanations
+[![Improved Calc](https://github.com/KirwinAl/flask/actions/workflows/prod.yml/badge.svg?branch=improved_calc)](https://github.com/KirwinAl/flask/actions/workflows/prod.yml)
 
 Server: https://kaa46oop.herokuapp.com
 
