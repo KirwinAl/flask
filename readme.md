@@ -1,11 +1,7 @@
-# Project 1 : Website Made from Flask and Deployed to Heroku
-Live Production Badge : [![Run Tests, Build Dockerfile, Run on Heroku - Live Version](https://github.com/KirwinAl/flask/actions/workflows/prod.yml/badge.svg?branch=live)](https://github.com/KirwinAl/flask/actions/workflows/prod.yml)
+# Project 2 : OOP, AAA Testing, SOLID Explanations
 
-Dev Production Badge : [![Run Tests, Build Dockerfile, Run on Heroku - Dev Version](https://github.com/KirwinAl/flask/actions/workflows/dev.yml/badge.svg?branch=dev)](https://github.com/KirwinAl/flask/actions/workflows/dev.yml)
+Server: https://kaa46oop.herokuapp.com
 
-Live: https://kaa46live.herokuapp.com
-
-Dev: https://kaa46dev.herokuapp.com
 ***
 The webpages explain what Git, Docker, Python/Flask and CI/CD means and instructions within them 
 to use this application yourself.

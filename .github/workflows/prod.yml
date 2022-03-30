@@ -3,12 +3,12 @@ name: Run Tests, Build Dockerfile, Run on Heroku
 on:
   push:
     branches:
-      - 'live'
+      - 'improved_calc'
     tags:
       - 'v*'
   pull_request:
     branches:
-      - 'live'
+      - 'improved_calc'
 #This is sent to the live version of the project
 jobs:
   deploy:
